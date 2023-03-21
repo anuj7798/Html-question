@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 16</title>
+</head>
+<body><center>
+	<h1>Factorial Calculator</h1>
+	<form>
+		<label for="num">Enter a number:</label>
+		<input type="text" id="num" name="num">
+		<button type="button" onclick="calculateFactorial()">Calculate</button>
+	</form>
+	<p id="result"></p></center>
+	<script>
+		function calculateFactorial() {
+			let num = document.getElementById("num").value;
+			if (num == "" || isNaN(num) || num < 0 || Math.floor(num) != num) {
+				document.getElementById("result").innerHTML = "Please enter a positive integer.";
+			} else {
+				let factorial = 1;
+				for (let i = 2; i <= num; i++) {
+					factorial *= i;
+				}
+				document.getElementById("result").innerHTML = `The factorial of ${num} is ${factorial}.`;
+			}
+		}
+	</script>
+</body>
+</html>

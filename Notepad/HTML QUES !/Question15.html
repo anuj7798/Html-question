@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 15</title>
+</head>
+<body><center>
+	<h1>Even or Odd Checker</h1>
+	<form>
+		<label for="num">Enter a number:</label>
+		<input type="text" id="num" name="num">
+		<button type="button" onclick="checkEvenOdd()">Check</button>
+	</form>
+	<p id="result"></p></center>
+	<script>
+		function checkEvenOdd() {
+			let num = document.getElementById("num").value;
+			if (num % 2 == 0) {
+				document.getElementById("result").innerHTML = `${num} is even.`;
+			} else {
+				document.getElementById("result").innerHTML = `${num} is odd.`;
+			}
+		}
+	</script>
+</body>
+</html>
